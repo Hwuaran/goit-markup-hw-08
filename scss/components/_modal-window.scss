@@ -7,6 +7,7 @@
 	height: 100%;
 
 	background: rgba(0, 0, 0, 0.2);
+	overflow-y: scroll;
 
 	opacity: 1;
 	visibility: visible;
@@ -22,12 +23,24 @@
 }
 
 .modal {
-	position: absolute;
+	position: relative;
+	overflow: auto;
 	top: 50%;
 	left: 50%;
 
-	width: 528px;
-	height: 581px;
+	width: 450px;
+	height: 609px;
+	@media screen and (max-width: 449px) {
+		width: 100%;
+	}
+	@media screen and (max-height: 608px) {
+		height: 100%;
+	}
+	@media screen and (min-width: 1200px) {
+		overflow: hidden;
+		width: 528px;
+		height: 581px;
+	}
 
 	opacity: 1;
 
@@ -61,7 +74,8 @@
 	cursor: pointer;
 	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-	fill: var(--blue-text-color);}
+	&:hover,
+	&:focus {
+		fill: var(--blue-text-color);
+	}
 }
