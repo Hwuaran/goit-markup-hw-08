@@ -1,0 +1,35 @@
+.work {
+	padding-top: 0;
+}
+
+.work__title {
+	margin-bottom: 50px;
+}
+.work__list {
+	display: flex;
+	gap: 30px;
+}
+
+.work__item {
+	position: relative;
+	display: flex;
+	width: 370px;
+}
+.work__box--text-position {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	width: 370px;
+	height: 70px;
+	background-color: var(--work-bgr-color);
+}
+.work__text {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: calc(16 / 14);
+	text-transform: uppercase;
+	color: var(--white-bgr-text-color);
+	cursor: default;
+}
