@@ -55,6 +55,12 @@ ul {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .list {
@@ -453,6 +459,115 @@ img {
   background-color: var(--selection-btn-color);
 }
 
+.mobile-menu__overlay {
+  z-index: 1100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__overlay {
+    display: none;
+  }
+}
+.mobile-menu__overlay.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.mobile-menu__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  max-width: 480px;
+  height: 100%;
+  background-color: --white-bgr-text-color;
+  padding: 48px 40px;
+}
+
+.mobile-menu__list:first-child {
+  margin-bottom: auto;
+}
+
+.mobile-menu__list:nth-child(2) {
+  margin-bottom: 64px;
+}
+
+.mobile-nemu__item {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: var(--blue-text-color);
+}
+
+.mobile-menu__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: var(--gray-text-color);
+}
+
+.mobile-menu__nav {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--black-text-color);
+  margin-bottom: 32px;
+}
+
+.mobile-social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mobile-social__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+  color: var(--blue-text-color);
+}
+.mobile-social__item:not(:last-child) .mobile-social__link::after {
+  content: "";
+  display: block;
+  width: 1px;
+  margin-left: 10px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -470,7 +585,79 @@ img {
 @media screen and (max-width: 767px) {
   .header__container {
     padding: 16px 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
+}
+
+.header__mobile-btn--menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 2000;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--black-text-color);
+}
+@media screen and (min-width: 767px) {
+  .header__mobile-btn--menu {
+    display: none;
+  }
+}
+
+.header__mobile-btn--icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header__mobile-btn--open {
+  opacity: 1;
+  width: 24px;
+  height: 16px;
+}
+
+.header__mobile-btn--close {
+  opacity: 0;
+}
+
+.header__mobile-btn--menu.is-active {
+  position: fixed;
+}
+
+.header__mobile-btn--menu.is-active.header__mobile-btn--open {
+  opacity: 0;
+}
+
+.header__mobile-btn--menu.is-active.header__mobile-btn--close {
+  opacity: 1;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  fill: var(--blue-text-color);
+}
+
+.header__mobile-btn--icon.is-active .header__mobile-btn--open {
+  opacity: 1;
+}
+
+.header__mobile-btn--icon.is-active .header__mobile-btn--close {
+  opacity: 0;
 }
 
 .nav {
