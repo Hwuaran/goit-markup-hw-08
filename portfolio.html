@@ -29,10 +29,22 @@
 					Web
 					<span class="logo__text--black">Studio</span>
 				</a>
+				<button
+					class="header__mobile-btn--menu"
+					type="button"
+					data-menu-button
+					aria-label="кнопка меню"
+					aria-expanded="false"
+				>
+					<svg class="header__mobile-btn--icon" width="40" height="40">
+						<use class="header__mobile-btn--open" href="./images/icons/icons.svg#menu_40px"></use>
+						<use class="header__mobile-btn--close" href="./images/icons/icons.svg#close_24px"></use>
+					</svg>
+				</button>
 				<nav class="nav">
 					<ul class="nav__list list">
-						<li><a class="nav__link link" href="./index.html">Студия</a></li>
-						<li><a class="nav__link link current" href="./portfolio.html">Портфолио</a></li>
+						<li><a class="nav__link link current" href="./index.html">Студия</a></li>
+						<li><a class="nav__link link" href="./portfolio.html">Портфолио</a></li>
 						<li><a class="nav__link link" href="">Контакты</a></li>
 					</ul>
 				</nav>
@@ -73,13 +85,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img1.jpg"
-										alt="Сайт Технокряк"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio1_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio1_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio1_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio1_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio1_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio1_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio1_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio1_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio1_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio1_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio1_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio1_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img1.jpg"
+											alt="Сайт Технокряк"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -96,13 +162,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img2.jpg"
-										alt="Дизайн постера"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio2_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio2_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio2_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio2_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio2_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio2_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio2_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio2_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio2_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio2_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio2_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio2_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img2.jpg"
+											alt="Дизайн постера"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -119,13 +239,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img3.jpg"
-										alt="Приложение ресторана"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio3_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio3_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio3_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio3_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio3_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio3_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio3_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio3_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio3_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio3_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio3_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio3_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img3.jpg"
+											alt="Приложение ресторана"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -142,13 +316,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img4.jpg"
-										alt="Маркетинг проекта"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio4_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio4_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio4_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio4_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio4_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio4_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio4_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio4_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio4_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio4_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio4_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio4_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img4.jpg"
+											alt="Маркетинг проекта"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -165,13 +393,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img5.jpg"
-										alt="Дизайн приложения"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio5_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio5_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio5_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio5_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio5_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio5_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio5_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio5_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio5_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio5_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio5_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio5_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img5.jpg"
+											alt="Дизайн приложения"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -188,13 +470,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img6.jpg"
-										alt="Сайт Inspiration has no Borders"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio6_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio6_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio6_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio6_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio6_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio6_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio6_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio6_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio6_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio6_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio6_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio6_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img6.jpg"
+											alt="Сайт Inspiration has no Borders"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -211,13 +547,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img7.jpg"
-										alt="Дизайн издания"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio7_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio7_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio7_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio7_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio7_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio7_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio7_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio7_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio7_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio7_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio7_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio7_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img7.jpg"
+											alt="Дизайн издания"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -234,13 +624,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img8.jpg"
-										alt="Маркетинг проекта"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio8_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio8_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio8_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio8_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio8_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio8_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio8_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio8_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio8_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio8_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio8_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio8_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img8.jpg"
+											alt="Маркетинг проекта"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -257,13 +701,67 @@
 						<li class="portfolio__item">
 							<a class="portfolio__link link" href="">
 								<div class="portfilio__card">
-									<img
-										calass="portfolio__img"
-										src="./images/portfolio/img9.jpg"
-										alt="Приложение"
-										width="370"
-										height="294"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio9_1x.webp 1x,
+												./images\responsive\desctop\portfolio\portfolio9_2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\desctop\portfolio\portfolio9_1x.jpg 1x,
+												./images\responsive\desctop\portfolio\portfolio9_2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio9_1x.webp 1x,
+												./images\responsive\tabl\portfolio\portfolio9_2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\tabl\portfolio\portfolio9_1x.jpg 1x,
+												./images\responsive\tabl\portfolio\portfolio9_2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio9_1x.webp 1x,
+												./images\responsive\mobile\portfolio\portfolio9_2x.webp 2x
+											"
+											media="(max-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images\responsive\mobile\portfolio\portfolio9_1x.jpg 1x,
+												./images\responsive\mobile\portfolio\portfolio9_2x.jpg 2x
+											"
+										/>
+
+										<img
+											calass="portfolio__img"
+											src="./images/portfolio/img9.jpg"
+											alt="Приложение"
+											width="450"
+											height="294"
+										/>
+									</picture>
+
 									<div class="portfilio__overlay">
 										<p class="portfilio__description">
 											Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -381,6 +879,43 @@
 				</div>
 			</div>
 		</footer>
+		<div class="mobile-menu__overlay" data-menu>
+			<div class="mobile-menu__container">
+				<ul class="mobile-menu__list list">
+					<li class="mobile-nemu__item">
+						<a href="./index.html" class="mobile-menu__nav link">Студия</a>
+					</li>
+					<li class="mobile-nemu__item">
+						<a href="./portfolio.html" class="mobile-menu__nav link current__mibile">Портфолио</a>
+					</li>
+					<li class="mobile-nemu__item">
+						<a href="" class="mobile-menu__nav link">Контакты</a>
+					</li>
+				</ul>
+				<ul class="mobile-menu__list list">
+					<li class="mobile-nemu__item">
+						<a href="tel:+380961111111" class="mobile-menu__tel link">+38 096 111 11 11</a>
+					</li>
+					<li class="mobile-nemu__item">
+						<a href="mailto:info@devstudio.com" class="mobile-menu__mail link">info@devstudio.com</a>
+					</li>
+				</ul>
+				<ul class="mobile-social__list list">
+					<li class="mobile-social__item">
+						<a href="" class="mobile-social__link link">Instagram</a>
+					</li>
+					<li class="mobile-social__item">
+						<a href="" class="mobile-social__link link">Twitter</a>
+					</li>
+					<li class="mobile-social__item">
+						<a href="" class="mobile-social__link link">Facebook</a>
+					</li>
+					<li class="mobile-social__item">
+						<a href="" class="mobile-social__link link">LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>
