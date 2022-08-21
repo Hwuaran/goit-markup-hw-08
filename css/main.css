@@ -546,6 +546,11 @@ img {
   color: var(--black-text-color);
   margin-bottom: 32px;
 }
+@media screen and (max-width: 479px) {
+  .mobile-menu__nav {
+    font-size: 34px;
+  }
+}
 .mobile-menu__nav:hover, .mobile-menu__nav:focus {
   color: var(--blue-text-color);
 }
