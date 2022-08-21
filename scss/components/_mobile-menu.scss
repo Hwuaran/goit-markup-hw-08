@@ -3,6 +3,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	overflow: scroll;
 
 	width: 100vw;
 	height: 100vh;
@@ -38,7 +39,7 @@
 	margin-bottom: auto;
 }
 .mobile-menu__list:nth-child(2) {
-	margin-bottom: 64px;
+	margin-bottom: auto;
 }
 .mobile-nemu__item {
 	margin-bottom: 32px;
