@@ -29,18 +29,6 @@
 					Web
 					<span class="logo__text--black">Studio</span>
 				</a>
-				<button
-					class="header__mobile-btn--menu"
-					type="button"
-					data-menu-button
-					aria-label="кнопка меню"
-					aria-expanded="false"
-				>
-					<svg class="header__mobile-btn--icon" width="40" height="40">
-						<use class="header__mobile-btn--open" href="./images/icons/icons.svg#menu_40px"></use>
-						<use class="header__mobile-btn--close" href="./images/icons/icons.svg#close_24px"></use>
-					</svg>
-				</button>
 				<nav class="nav">
 					<ul class="nav__list list">
 						<li><a class="nav__link link" href="./index.html">Студия</a></li>
@@ -66,6 +54,18 @@
 						</a>
 					</li>
 				</ul>
+				<button
+					class="header__mobile-btn--menu"
+					type="button"
+					data-menu-button
+					aria-label="кнопка меню"
+					aria-expanded="false"
+				>
+					<svg class="header__mobile-btn--icon" width="40" height="40">
+						<use class="header__mobile-btn--open" href="./images/icons/icons.svg#menu_40px"></use>
+						<use class="header__mobile-btn--close" href="./images/icons/icons.svg#close_24px"></use>
+					</svg>
+				</button>
 			</div>
 		</header>
 		<!-- main section -->
@@ -153,7 +153,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="portrolio__wrapper">
+								<div class="portrolio__wrapper portrolio__wrapper--first-card">
 									<h2 class="portfolio__subtitle">Технокряк</h2>
 									<p class="portfolio__text">Веб-сайт</p>
 								</div>
@@ -492,7 +492,7 @@
 										<source
 											srcset="
 												./images/responsive/tabl/portfolio/portfolio6_1x.webp 1x,
-												./images/responsive/tabl/portfolio/portfolio6_2x.webp 2x
+												./images/responsive/tabl/portfolio/portfolio6_x2.webp 2x
 											"
 											media="(min-width: 768px)"
 											type="image/webp"
