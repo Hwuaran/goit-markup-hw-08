@@ -52,7 +52,7 @@
 	opacity: 0;
 }
 .header__mobile-btn--menu.is-active {
-	position: absolute;
+	position: fixed;
 	right: 15px;
 }
 .header__mobile-btn--menu.is-active .header__mobile-btn--open {
